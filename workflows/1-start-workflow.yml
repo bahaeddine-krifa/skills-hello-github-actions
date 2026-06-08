@@ -1,0 +1,19 @@
+name: Step 1
+
+on:
+  push:
+    branches:
+      - welcome-workflow
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+jobs:
+  check_workflow:
+    name: Check workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
